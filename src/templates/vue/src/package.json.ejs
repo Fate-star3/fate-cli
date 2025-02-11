@@ -1,0 +1,18 @@
+{
+  "name": "<%= projectName %>",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build"
+  },
+  "dependencies": {
+    "vue": "^3.3.0"<% if (features.includes('router')) { %>,
+    "vue-router": "^4.2.0"<% } %>
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^4.0.0",
+    "vite": "^4.0.0"<% if (features.includes('eslint')) { %>,
+    "eslint": "^8.0.0",
+    "eslint-plugin-vue": "^9.0.0"<% } %>
+  }
+}

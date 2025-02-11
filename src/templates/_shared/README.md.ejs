@@ -1,0 +1,11 @@
+# <%= projectName %>
+
+<% if (framework === 'vue') { %>
+## Vue <%= vueVersion %> Project
+<% } else { %>
+## React Project
+<% } %>
+
+<% if (features.includes('eslint')) { %>
+✅ ESLint configured
+<% } %>

@@ -1,0 +1,16 @@
+import React from 'react'<% if (features.includes('router')) { %>
+import { Routes, Route } from 'react-router-dom'<% } %>
+
+export default function App() {
+  return (
+    <% if (features.includes('router')) { %>
+    <Routes>
+      <Route path="/" element={<Home />} />
+    </Routes>
+    <% } else { %>
+    <div className="App">
+      <h1>Welcome to <%= projectName %></h1>
+    </div>
+    <% } %>
+  )
+}

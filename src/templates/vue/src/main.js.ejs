@@ -1,0 +1,7 @@
+import { createApp } from 'vue'
+import App from './App.vue'<% if (features.includes('router')) { %>
+import router from './router'<% } %>
+
+const app = createApp(App)<% if (features.includes('router')) { %>
+app.use(router)<% } %>
+app.mount('#app')

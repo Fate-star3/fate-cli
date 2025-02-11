@@ -1,0 +1,9 @@
+# 通用忽略规则
+node_modules
+dist
+*.log
+
+# 条件生成
+<% if (features.includes('typescript')) { %>
+*.tsbuildinfo
+<% } %>
