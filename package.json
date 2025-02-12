@@ -4,7 +4,7 @@
   "description": "练手的前端脚手架项目",
   "main": "./bin/cli.js",
   "bin": {
-    "fateStar-cli": "./bin/cli.js"
+    "fate-cli": "./bin/cli.js"
   },
   "files": [
     "bin"
