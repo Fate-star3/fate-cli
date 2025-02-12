@@ -1,10 +1,10 @@
 {
-  "name": "fate-cli",
+  "name": "fate_star-cli",
   "version": "1.0.0",
   "description": "练手的前端脚手架项目",
   "main": "./bin/cli.js",
   "bin": {
-    "fate-cli": "./bin/cli.js"
+    "fateStar-cli": "./bin/cli.js"
   },
   "files": [
     "bin"
