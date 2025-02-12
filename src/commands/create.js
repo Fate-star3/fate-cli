@@ -27,18 +27,23 @@ module.exports = async (projectName) => {
       ],
     });
     console.log('answers', answers);
+    const config = {
+      framework: answers,
+      features: [],
+      projectName: projectName || 'my-app',
+    };
 
     // 2. 创建项目目录
-    const projectPath = path.resolve(process.cwd(), projectName);
+    const projectPath = path.resolve(path.dirname(process.cwd()), projectName);
     await fs.ensureDir(projectPath);
     console.log('projectPath', projectPath);
 
     // 3. 处理模板
-    const templateManager = new TemplateManager(answers);
-    await templateManager.render(answers, projectPath);
+    const templateManager = new TemplateManager();
+    await templateManager.render(config, projectPath);
 
     // 4. 安装依赖
-    await installDependencies(projectPath, answers);
+    await installDependencies(projectPath, config);
 
     spinner.succeed('项目创建成功!');
     successLog(`cd ${projectName} && npm run dev`);

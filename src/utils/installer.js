@@ -37,7 +37,7 @@ function resolveDependencies(config) {
 
   // 添加基础依赖
   result.dependencies.push(
-    ...DEPENDENCY_MAP.base[config?.toLowerCase()]
+    ...DEPENDENCY_MAP.base[config?.framework?.toLowerCase()]
   );
 
   // 添加功能依赖
